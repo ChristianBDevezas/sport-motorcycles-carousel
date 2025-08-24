@@ -1,0 +1,208 @@
+:root {
+    --color-white: white;
+    --color-black: #1d2525;
+    --color-primary: #0d48a0;
+    --color-grey: #bebcbc;
+    --color-orange: orange;
+    --color-green: green;
+    --color-red: red;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top: 1rem;
+    background: #dbdad8;
+}
+
+.motorcycles {
+    position: relative;
+    border: 1px solid transparent;
+}
+
+.motorcycles__btn {
+    position: absolute;
+    top: -4px;
+    left: 12px;
+    cursor: pointer;
+    padding: 3px 7px;
+    font-size: 1rem;
+    border: 2px solid var(--color-black);
+    border-radius: 4px;
+    color: var(--color-red);
+    background: rgba(255, 255, 255, 1);
+    transition: all .4s;
+}
+.motorcycles__btn:hover {
+    background: rgba(0, 0, 0, .2);
+}
+
+.motorcycles__btn.change-btn-color {
+    color: var(--color-green);
+}
+
+.section-title h2 {
+    font-size: 2.3rem;
+    margin: 2rem 0 .8rem 0;    
+    text-align: center;
+    color: var(--color-primary);
+}
+
+.motorcycles__content {
+    max-width: 1250px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+article.motorcycles__content__slider {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+    padding: 0 3rem;
+    /* overflow-x: auto; */
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-primary) var(--color-grey);
+    transition: all .3s;
+}
+
+article.motorcycles__content__slider::-webkit-scrollbar {
+    height: 5px;
+    width: 2px;
+    background: #d5d5d5;
+}
+article.motorcycles__content__slider::-webkit-scrollbar-thumb {
+    background: var(--color-primary);
+    outline: 2px solid #eee;
+}
+
+.arrow {
+    margin: 0 1rem;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 3px solid var(--color-orange);
+    opacity: .7;
+    transition: all .3s;
+}
+.arrow:hover {
+    opacity: 1;
+}
+
+.arrow i {
+    font-size: calc(23px + 1vw);
+    background-color: var(--color-orange);
+    border-radius: 50%;
+}
+
+.motorcycles__content__slider .thumbnail {
+    flex: 0 0 auto;
+    max-height: 397px;
+    max-width: 265px;
+    cursor: pointer;
+    margin: 5px;
+    border: 3px solid var(--color-white);
+    box-shadow: 0 0 0 3px var(--color-black), 0 0 0 3px var(--color-black);
+    border-radius: 5px;
+    overflow: hidden;
+    transform: scale(.95);
+    transition: all .3s;
+    margin-bottom: 20px;
+    position: relative;
+}
+.motorcycles__content__slider .thumbnail:hover {
+    transform: scale(1);
+    box-shadow: 0 0 4px var(--color-primary), 0 0 0 2px var(--color-primary), 0 0 0 2px var(--color-primary);
+}
+
+.thumbnail img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-bottom: 3px solid var(--color-white);
+}
+
+.thumbnail__product-details {
+    text-align: center;
+    padding: .45rem 0 .85rem 0;
+    background-color: var(--color-black);
+}
+
+.thumbnail__product-details h2 {
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: var(--color-white);
+}
+
+.thumbnail__product-details p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: .6rem;
+    color: var(--color-white);
+}
+
+.thumbnail__product-details a {
+    font-size: 1rem;
+    text-decoration: none;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    padding: .3rem .9rem .4rem .9rem;
+    border-radius: 3px;
+    transition: all .3s;
+}
+.thumbnail__product-details a:hover {
+    background-color: var(--color-orange);
+}
+
+/*Media Queries*/
+@media(max-width: 900px) {
+        .motorcycles__content__slider .thumbnail {
+        max-height: 350px;
+        max-width: 235px;
+    }
+}
+
+@media(max-width: 700px) {
+    .motorcycles__btn {
+        font-size: calc(.85rem + .2vw);
+    }
+
+    .section-title h2 {
+        font-size: 1.8rem;
+    }
+
+    .motorcycles__content__slider .thumbnail {
+        max-height: 290px;
+        max-width: 194px;
+    }
+
+    .thumbnail__product-details h2 {
+        font-size: calc(.6rem + 1vw);
+    }
+    
+    .thumbnail__product-details p {
+        font-size: calc(.6rem + 1vw);
+        margin-bottom: .5rem;
+    }
+    
+    .thumbnail__product-details a {
+        font-size: calc(.5rem + 1vw);
+    }
+}
+
+@media(max-width: 500px) {
+    .motorcycles__content__slider .thumbnail {
+        max-height: 250px;
+        max-width: 167px;
+    }
+}

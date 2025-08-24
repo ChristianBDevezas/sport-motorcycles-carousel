@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sport Motorcycles</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./carousel-slider.css" />
+</head>
+<body>
+    <!--MOTORCYCLES-->
+    <section class="motorcycles">
+      <!--Play/Stop Button-->
+      <button type="button" class="motorcycles__btn" id="play-stop">Stop Slider</button>
+
+      <audio src="audio/hayabusa-motor.mp3" id="engine-sound"></audio>
+
+       <!--Motorcycles Title-->
+        <div class="section-title center-flex">
+            <h2>Sport Motorcycles</h2>
+        </div>
+
+      <!--Left Button-->
+      <div class="motorcycles__content">
+        <button id="slide-left" class="arrow">
+          <i class="fas fa-arrow-circle-left"></i>
+        </button>
+
+        <!--Motorcycles Slider-->
+        <article class="motorcycles__content__slider" id="slider">
+          <!-- <div class="thumbnail">
+            <img src="./img/cb500r.jpg" alt="CB 500R" />
+
+            <div class="thumbnail__product-details">
+              <h2>Honda CB 500R</h2>
+              <p>US$8.500</p>
+              <a href="#">Buy Now</a>
+            </div>
+          </div>
+
+          <div class="thumbnail">
+            <img src="./img/cbr600rr.jpg" alt="CBR 600RR" />
+
+            <div class="thumbnail__product-details">
+              <h2>Honda CBR 600RR</h2>
+              <p>US$11.500</p>
+              <a href="#">Buy Now</a>
+            </div>
+          </div>
+
+          <div class="thumbnail">
+            <img src="./img/cbr1000rr.jpg" alt="CBR 1000RR" />
+
+            <div class="thumbnail__product-details">
+              <h2>Honda CBR 1000RR</h2>
+              <p>US$18.000</p>
+              <a href="#">Buy Now</a>
+            </div>
+          </div>
+
+          <div class="thumbnail">
+            <img src="./img/gsx-600r.jpg" alt="GSX 600R" />
+
+            <div class="thumbnail__product-details">
+              <h2>Suzuki GSX 600R</h2>
+              <p>US$11.500</p>
+              <a href="#">Buy Now</a>
+            </div>
+          </div> -->
+        </article>
+        <!--end Motorcycles Slider-->
+
+        <!--Right Button-->
+        <button id="slide-right" class="arrow">
+          <i class="fas fa-arrow-circle-right"></i>
+        </button>
+      </div>
+    </section>
+
+    <script src="./js/carousel-slider.js" type="module"></script>
+</body>
+</html>
